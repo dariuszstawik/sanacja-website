@@ -79,7 +79,10 @@ export default function ProductCard({
               {productCardSubtitle}
             </span>
           ) : href ? (
-            <Link href={href ? href : ""} className="text-primaryOrange">
+            <Link
+              href={href ? href : "/zarezerwuj"}
+              className="text-primaryOrange"
+            >
               Złóż rezerwację
             </Link>
           ) : (
