@@ -65,7 +65,7 @@ const NavbarHomepage = () => {
                       nav.scroll && handleScroll(e);
                     }
                   }}
-                  className={`${isActive && "text-primaryGreen"}`}
+                  className={`${isActive && "text-white"}`}
                 >
                   {nav.title}
                 </Link>

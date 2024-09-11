@@ -31,7 +31,7 @@ export default async function Zarezerwuj() {
   return (
     <>
       <Navbar />
-      <div className="w-[80%] mx-auto my-16 flex justify-between">
+      <main className="mt-32">
         {/* <h2 classNAme="mt-32">{stripeProducts[0].product.name}</h2> */}
 
         <ul>
@@ -60,6 +60,7 @@ export default async function Zarezerwuj() {
                     contentfulProduct.fields.description
                   )}
                 </ParagraphWithImage>
+                <hr className="w-screen h-1 text-black my-10" />
               </li>
             );
           })}
@@ -90,7 +91,7 @@ export default async function Zarezerwuj() {
           icon="/menu-rybne-min.svg"
           href="/"
         /> */}
-      </div>
+      </main>
     </>
   );
 }

@@ -16,10 +16,10 @@ export default function OrderBar({ stripeProduct, contentfulProduct }) {
   const [productAmount, setProductAmount] = useState(1);
 
   return (
-    <div className="pl-4 flex flex-wrap gap-6 items-center justify-center pt-2">
+    <div className="pl-4 flex flex-wrap gap-6 items-center justify-end pt-2">
       <h3>
-        cena <span className="w-10" />
-        <span className="text-smartOrange">
+        cena: <span className="w-10" />
+        <span className="text-primaryOrange">
           {(stripeProduct[0].unit_amount / 100).toFixed(2) + " "}
           zł{" "}
         </span>

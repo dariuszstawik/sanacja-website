@@ -42,7 +42,7 @@ body {
     @apply text-3xl xl:text-[44px] font-semibold
   }
   h2 {
-    @apply text-3xl xl:text-[44px] font-semibold
+    @apply text-3xl xl:text-[44px] font-semibold leading-tight
   }
 
   h3 {
@@ -54,6 +54,10 @@ body {
   }
 
   article p {
+    @apply mb-4
+  }
+
+  p {
     @apply mb-4
   }
 

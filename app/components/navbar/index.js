@@ -53,7 +53,7 @@ const Navbar = () => {
                 key={nav.id}
                 className={`${
                   nav.button ? "text-base" : "text-lg"
-                } text-primaryOrange hover:text-slate-900 cursor-pointer ${
+                } text-primaryOrange hover:text-white cursor-pointer ${
                   isActive && "text-primaryGreen"
                 }}`}
               >
@@ -63,7 +63,7 @@ const Navbar = () => {
                     closeMobileMenu();
                     // handleScroll(e);
                   }}
-                  className={`${isActive && "text-primaryGreen"}`}
+                  className={`${isActive && "text-white"}`}
                 >
                   {nav.title}
                 </Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
             );
           })}
         </ul>
-        <Link href={`/cart-page`}>
+        <Link href={`/cart-page`} className="">
           <ShoppingCartIcon itemCount={cartItems.length} />
         </Link>
         <Hamburger

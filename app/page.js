@@ -5,14 +5,24 @@ import CallToAction from "./components/call-to-action";
 import MenuOffer from "./components/menu-offer";
 import Navbar from "./components/navbar";
 import NavbarHomepage from "./components/navbar-homepage";
+import { client } from "@/lib/contentful/client";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-export default function Home() {
+async function getContentfulContent() {
+  const resContent = await client.getEntries({
+    content_type: "products",
+  });
+  return resContent.items;
+}
+
+export default async function Home() {
+  const contentfulProducts = await getContentfulContent();
   return (
     <main>
       <NavbarHomepage />
       <div className="pt-28 relative w-screen h-[300px] lg:h-screen overflow-hidden">
         <Image
-          src="/strona.internetowa-sanacja-1.png"
+          src="/hero-image.jpg"
           alt="zdjęcie pracownika"
           fill={true}
           sizes={"100vw"}
@@ -29,7 +39,7 @@ export default function Home() {
 
       <div className="w-[80%] mx-auto my-16 flex justify-between">
         <ProductCard
-          productCardImg="/menu-sanacyjne.jpg"
+          productCardImg="/menu-sanacyjne-sm.jpg"
           alt=""
           productCardTitle="Sanacyjne"
           // productCardSubtitle="Złóż rezerwację"
@@ -90,7 +100,34 @@ export default function Home() {
         tygodniupracy. Daj się ponieść przyjemności i odwiedź nas 28.
         września.Sprawdź menu poniżej!
       </div>
-      <ParagraphWithImage
+
+      <ul>
+        {contentfulProducts.map((contentfulProduct, i) => {
+          return (
+            <li key={i}>
+              <ParagraphWithImage
+                productCardImg={`https://${contentfulProduct.fields.image.fields.file.url}`}
+                alt=""
+                title={documentToReactComponents(
+                  contentfulProduct.fields.title
+                )}
+                productCardTitle={contentfulProduct.fields.cardTitle}
+                icon={`https://${contentfulProduct.fields.icon.fields.file.url}`}
+                href="/"
+                isFromContentful
+                contentfulProduct={contentfulProduct}
+              >
+                {documentToReactComponents(
+                  contentfulProduct.fields.description
+                )}
+              </ParagraphWithImage>
+              <hr className="w-screen h-1 text-black my-10" />
+            </li>
+          );
+        })}
+      </ul>
+
+      {/* <ParagraphWithImage
         title={
           <>
             Menu sanacyjne{" "}
@@ -169,7 +206,7 @@ export default function Home() {
         pełnasmaków!Do delikatności ryb nic tak nie pasuje jak kwaśne i lekkie
         przełamanie.AutorsKIE LODY JEŻYNOWE PRZYGOtowywane przez nas na miejscu.
         Niskokaloryczne desery to jest to!
-      </ParagraphWithImage>
+      </ParagraphWithImage> */}
 
       <CallToAction
         title="Muzyka na żywo i jedzenie to coś co kochamy!"
