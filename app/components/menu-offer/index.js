@@ -10,7 +10,7 @@ export default function MenuOffer({ hasAdditionalContent }) {
           productCardTitle="Sanacyjne"
           // productCardSubtitle="Złóż rezerwację"
           icon="/menu-sanacyjne-min.svg"
-          href="/"
+          href="/zarezerwuj"
         />
         <ProductCard
           productCardImg="/menu-vege.jpg"
@@ -18,7 +18,7 @@ export default function MenuOffer({ hasAdditionalContent }) {
           productCardTitle="Vege"
           // productCardSubtitle="Złóż rezerwację"
           icon="/menu-vege-min.svg"
-          href="/"
+          href="/zarezerwuj"
         />
 
         <ProductCard
@@ -27,13 +27,13 @@ export default function MenuOffer({ hasAdditionalContent }) {
           productCardTitle="Rybne"
           // productCardSubtitle="Złóż rezerwację"
           icon="/menu-rybne-min.svg"
-          href="/"
+          href="/zarezerwuj"
         />
       </div>
       {hasAdditionalContent && (
-        <div className="w-[80%] text-lg mx-auto my-16">
+        <div className="w-[80%] text-xl font-bold mx-auto my-16">
           Ważne: Prosimy o podanie ilości osób przy jednym stole podczas
-          dokonywania płatności, bądź kontakttelefoniczny/mailowy w celu
+          dokonywania płatności, bądź kontakt telefoniczny / mailowy w celu
           uzupełnienia tej informacji. Z góry dziękujemy!
         </div>
       )}

@@ -26,6 +26,13 @@ body {
   font-family: 'Minion Pro', serif;
 }
 
+.text-shadow-cloud {
+  text-shadow: 
+    0 4px 10px rgba(0, 0, 0, 0.7),  /* główny cień */
+    0 8px 30px rgba(0, 0, 0, 0.5),  /* dodatkowy rozmyty cień */
+    0 12px 50px rgba(0, 0, 0, 0.3); /* najszerszy cień */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -39,14 +46,14 @@ body {
   }
 
   h1 {
-    @apply text-3xl xl:text-[44px] font-semibold
+    @apply text-3xl xl:text-5xl font-bold
   }
   h2 {
-    @apply text-3xl xl:text-[44px] font-semibold leading-tight
+    @apply text-3xl xl:text-4xl font-bold leading-tight
   }
 
   h3 {
-    @apply text-2xl lg:text-3xl font-semibold
+    @apply text-2xl lg:text-3xl 
   }
 
   h4 {

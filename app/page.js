@@ -3,7 +3,6 @@ import ProductCard from "./components/product-card";
 import ParagraphWithImage from "./components/paragraph-with-image";
 import CallToAction from "./components/call-to-action";
 import MenuOffer from "./components/menu-offer";
-import Navbar from "./components/navbar";
 import NavbarHomepage from "./components/navbar-homepage";
 import { client } from "@/lib/contentful/client";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
@@ -26,15 +25,21 @@ export default async function Home() {
           alt="zdjęcie pracownika"
           fill={true}
           sizes={"100vw"}
-          className="w-full object-cover"
+          className="w-full object-cover object-top"
         />
+        <h1
+          className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-primaryOrange 
+        [text-shadow:_7px_5px_20px_#000000]"
+        >
+          Tworzymy nową historię
+        </h1>
       </div>
       <div className="w-[80%] text-xl font-bold mx-auto my-16">
         W pierwszej kolejności przedstawiamy Państwu nową odsłonę Sanacji. Na
-        naszych talerzach zawitałyNOWE SMAKI, opcje BEZGLUTENOWE oraz produkty
-        BEZLAKTOZY. W tym celu zapraszamy Państwana degustację, która odbędzie
+        naszych talerzach zawitały NOWE SMAKI, opcje BEZGLUTENOWE oraz produkty
+        BEZ LAKTOZY. W tym celu zapraszamy Państwa na degustację, która odbędzie
         się w naszym lokalu w Ostrowie Wielkopolskim przy ulicy Strzeleckiej 18
-        już28.września o godzinie 17:30. Piszemy nową historię Sanacji.
+        już 28.września o godzinie 17:30. Piszemy nową historię Sanacji.
       </div>
 
       <div className="w-[80%] mx-auto my-16 flex justify-between">
@@ -44,7 +49,7 @@ export default async function Home() {
           productCardTitle="Sanacyjne"
           // productCardSubtitle="Złóż rezerwację"
           icon="/menu-sanacyjne-min.svg"
-          href="/"
+          href="/zarezerwuj"
         />
         <ProductCard
           productCardImg="/menu-vege.jpg"
@@ -52,7 +57,7 @@ export default async function Home() {
           productCardTitle="Vege"
           // productCardSubtitle="Złóż rezerwację"
           icon="/menu-vege-min.svg"
-          href="/"
+          href="/zarezerwuj"
         />
 
         <ProductCard
@@ -61,26 +66,15 @@ export default async function Home() {
           productCardTitle="Rybne"
           // productCardSubtitle="Złóż rezerwację"
           icon="/menu-rybne-min.svg"
-          href="/"
+          href="/zarezerwuj"
         />
       </div>
 
       <section className="pt-28" id="degustacja">
-        <div className="w-screen h-32 bg-primaryGreen flex justify-between items-center px-[10%] mx-auto">
-          <img
-            src="/arrow-asset-white.svg"
-            alt="arrow"
-            className="text-white"
-          />
-          <span>
-            <h2 className="text-4xl text-primaryOrange">
-              Zamów stolik już dziś!
-            </h2>
-            <h3 className="text-4xl text-white">
-              28 września odbędzie się DEGUSTACJA!
-            </h3>
-          </span>
-        </div>
+        <CallToAction
+          title="Zamów stolik już dziś!"
+          subtitle="28 września odbędzie się DEGUSTACJA!"
+        />
       </section>
 
       <div className="relative w-screen h-[300px] lg:h-[440px] overflow-hidden">
@@ -92,13 +86,16 @@ export default async function Home() {
           className="w-full object-cover"
         />
       </div>
-      <div className="w-[80%] text-lg mx-auto my-16">
-        Organizujemy dla Państwa wieczórpełen spokoju, bogatych smaków i pięknej
-        muzyki na żywo.Już 28.września zapraszamy do spędzenia z nami sobotniego
-        wieczoru kończącego lato. Dobre jedzenie,śpiew młodej artystki oraz
-        lampki i powiew świeżego powietrza to coś, na co każdy zasługuje po
-        tygodniupracy. Daj się ponieść przyjemności i odwiedź nas 28.
-        września.Sprawdź menu poniżej!
+      <div className="w-[80%] text-xl font-bold mx-auto my-16">
+        Organizujemy dla Państwa{" "}
+        <span className="text-primaryOrange">
+          wieczórpełen spokoju, bogatych smaków i pięknej muzyki na żywo.{" "}
+        </span>{" "}
+        Już 28 września zapraszamy do spędzenia z nami sobotniego wieczoru
+        kończącego lato. Dobre jedzenie, śpiew młodej artystki oraz lampki i
+        powiew świeżego powietrza to coś, na co każdy zasługuje po tygodniu
+        pracy. Daj się ponieść przyjemności i odwiedź nas 28 września.{" "}
+        <span className="text-primaryOrange">Sprawdź menu poniżej!</span>
       </div>
 
       <ul>
@@ -113,8 +110,8 @@ export default async function Home() {
                 )}
                 productCardTitle={contentfulProduct.fields.cardTitle}
                 icon={`https:${contentfulProduct.fields.icon.fields.file.url}`}
-                href="/"
                 isFromContentful
+                href="/zarezerwuj"
                 contentfulProduct={contentfulProduct}
               >
                 {documentToReactComponents(
@@ -126,87 +123,6 @@ export default async function Home() {
           );
         })}
       </ul>
-
-      {/* <ParagraphWithImage
-        title={
-          <>
-            Menu sanacyjne{" "}
-            <span className="text-primaryOrange">
-              dla prawdziwych smakoszy wykwintnego mięsa
-            </span>
-          </>
-        }
-        productCardImg="/menu-sanacyjne.jpg"
-        icon="/menu-sanacyjne-min.svg"
-        productCardTitle="Sanacyjne"
-        href="/"
-        // productCardSubtitle="Złóż rezerwację"
-      >
-        Sanacyjną wersje menu otwieraCARPACCIO WOŁOWE. Jest to rodzajprzystawki
-        składającej się z bardzo cienko pokrojonego mięsa wołowegoułożonego na
-        liściach rukoli oraz dodatków takich jak oliwki i kapary. Oczywiścienie
-        może zabraknąć również parmezu.Mniam!Głównym daniem są nasze
-        pokazowePoLIKI WOŁOWE. KRuche, soczystei rozpływające się w ustach mięso
-        polane sosem borowikowym na bazie śmietany.Bukiet grillowanych warzyw
-        otula mięso ułożone na kaszy z kawałkami papryczki.Jeżeli jeszcze nie
-        spróbowaliście naszych policzków to najwyższy czas o zmienić.Jakość
-        gwarantowana!Na koniec uczty „dla smakoszy mięsa” mamy w
-        zanadrzuszarlOTKĘ. RÓWniekrucha słodycz, która na talerzu podana jest w
-        towarzystwie gałki lodówwaniliowych.Słodkości nigdy nie za wiele!
-      </ParagraphWithImage>
-      <hr className="w-screen h-1 text-black my-10" />
-      <ParagraphWithImage
-        title={
-          <>
-            Menu Vege{" "}
-            <span className="text-primaryOrange">
-              podobno dla tych, któym ciężko dogodzić smakiem!
-            </span>
-          </>
-        }
-        productCardImg="/menu-vege.jpg"
-        icon="/menu-vege-min.svg"
-        productCardTitle="Vege"
-        href="/"
-        // productCardSubtitle="Złóż rezerwację"
-      >
-        Wegetariańskie menu na dobre zawitało w naszej restauracji. Początkiem
-        nowej,bezmięsnej historii w Sanacji jestPASTA Z AVOCADO z włoskimi
-        paluchami, serwowana z oliwą i czarnym sezamem. Głęboki, maślany smak
-        idealnieprzygotuje wasze podniebienia do tego, co czeka na was w daniu
-        głównym.Dalikatnie, lecz z pazurem smaku!GnOCCHITO nasze danie główne w
-        wersji „Vege”. Głęboki smak parmezanu,suszonych pomidorów przełamany
-        szpinakiem.Nic dodać - nic ująć, pychota!Ze słodkości mamy w tym
-        menubezę. NIE ma nic słodszego, co mogłobyzamknąć wasze kubki smakowe.
-        Do bezy oczywiście niezastąpione w swym smakui towarzystwie:maliny i
-        truskawki.SłODko - kwaśno!
-      </ParagraphWithImage>
-
-      <hr className="w-screen h-1 text-black my-10" />
-      <ParagraphWithImage
-        title={
-          <>
-            Menu Rybne{" "}
-            <span className="text-primaryOrange">
-              dla tych, co kochają delikatność!
-            </span>
-          </>
-        }
-        productCardImg="/menu-rybne.jpg"
-        icon="/menu-rybne-min.svg"
-        productCardTitle="Rybne"
-        href="/"
-        // productCardSubtitle="Złóż rezerwację"
-      >
-        Czy widzicie teGRZANECZKI Z ŁOSOSIEM? Czyste orzeźwienie smakowe.To
-        właśnie nimi otwieramy naszą ostatnią propozycję menu
-        degustacyjnego.Łosoś w towarzystwie granatu i truskawki...Yes,
-        please!Główne danie -dorSZ W SOSIE POROWO-WINNYM PODany na ryżu z
-        grillowaną fasolką szparagową, marchewką i brokułem.Kompozycja
-        pełnasmaków!Do delikatności ryb nic tak nie pasuje jak kwaśne i lekkie
-        przełamanie.AutorsKIE LODY JEŻYNOWE PRZYGOtowywane przez nas na miejscu.
-        Niskokaloryczne desery to jest to!
-      </ParagraphWithImage> */}
 
       <CallToAction
         title="Muzyka na żywo i jedzenie to coś co kochamy!"
@@ -246,14 +162,20 @@ export default async function Home() {
           href="/"
           // productCardSubtitle="Złóż rezerwację"
         >
-          To co nas wyróznia nie lezy w posiłkach... Serwujemy dania najwyzszej
-          jakosci, które podajemy wprawnie na schludnych talerzach - TO FAKT.
-          ALE wyróznia nas cos wiecej niz spozywanie posiłków przyrzadzonych
-          przez fachowego kucharza w obcym miejscu. Nas wyróznia to własnie
-          „obce” miejsce. Nasze wnetrze emanujace historia lat 20. XX wieku
-          oniesmiło juz niejednego. Zobacza Panstwo u nas poniemiecka kasę
+          <span className="text-primaryOrange">
+            To co nas wyróznia nie lezy w posiłkach...
+          </span>{" "}
+          Serwujemy dania najwyzszej jakosci, które podajemy wprawnie na
+          schludnych talerzach - TO FAKT.{" "}
+          <span className="text-primaryOrange">ALE wyróznia nas </span> coś
+          więcej niz spożywanie posiłków przyrządzonych przez fachowego kucharza
+          w obcym miejscu. Nas wyróznia to własnie „obce” miejsce. Nasze{" "}
+          <span className="text-primaryOrange">
+            wnętrze emanujące historią lat 20. XX wieku
+          </span>
+          onieśmieliło juz niejednego. Zobaczą Państwo u nas poniemiecką kasę
           fiskalną z lat wojennych, gramofon, maszyny do pisania i wiele, wiele
-          innych antyków z tamtych lat. Na antykach nie konczymy - dopiero nimi
+          innych antyków z tamtych lat. Na antykach nie kończymy - dopiero nimi
           zaczynamy.
         </ParagraphWithImage>
         <hr className="w-screen h-1 text-black my-10" />
@@ -272,19 +194,33 @@ export default async function Home() {
           icon="/sanacja-icon.svg"
           productCardTitle="Sala wiosenna"
           productCardSubtitle="Miejsce dla artystów i muzyki na żywo"
-          href="/"
+          href="/zarezerwuj"
           // productCardSubtitle="Złóż rezerwację"
         >
-          Kto nie jest „winny” niech pierwszy wychyli kieliszek. Wieczory, które
-          zaciesniaja relacje miedzy ludzmi to to, co lubimy najbardziej. Nie ma
-          nic lepszego na wieczór niz lampka dobrego wina i unoszacy sie zapach
-          swiezo przygotowanego jedzenia. Dla tych „niewinnych” co alkoholu nie
-          pija, serwujemy szeroka game swiezo wyciskanych soków z naszej
-          wyciskarki wolnoobrotowej KUVINGS D9900 Max Filter Technology.
-          „Innowacyjna technologia zastosowana w modelu D9900 sprawia, ze sok
-          staje sie jeszcze bardziej gładki i aksamitny.” To nie nasze słowa,
-          ale skoro producent tak pisze to... - nic tylko przyjsc do Sanacji i
-          pic.
+          <p>
+            Kto nie jest „winny” niech pierwszy wychyli kieliszek.{" "}
+            <span className="text-primaryOrange">
+              Wieczory, które zaciesniaja relacje miedzy ludzmi{" "}
+            </span>{" "}
+            to to, co lubimy najbardziej. Nie ma nic lepszego na wieczór niż
+            lampka dobrego wina i{" "}
+            <span className="text-primaryOrange">
+              unoszący się zapach swieżo przygotowanego jedzenia.
+            </span>
+          </p>
+          <p>
+            Dla tych „niewinnych” co alkoholu nie piją,{" "}
+            <span className="text-primaryOrange">
+              serwujemy szeroką gamę świeżo wyciskanych soków{" "}
+            </span>
+            z naszej wyciskarki wolnoobrotowej KUVINGS D9900 Max Filter
+            Technology. „Innowacyjna technologia zastosowana w modelu D9900
+            sprawia, że sok staje się jeszcze bardziej gładki i aksamitny.” To
+            nie nasze słowa, ale skoro producent tak pisze to...{" "}
+            <span className="text-primaryOrange">
+              - nic tylko przyjść do Sanacji i pić.
+            </span>
+          </p>
         </ParagraphWithImage>
 
         <ParagraphWithImage
@@ -304,16 +240,25 @@ export default async function Home() {
           href="/"
           // productCardSubtitle="Złóż rezerwację"
         >
-          Jestesmy za unowoczesnieniem - unowoczesniamy dania, składniki czy
-          sposoby na spedzanie u nas czasu, ALE pielegnujemy historie, która
-          miała miejsce w stosunkowo niedalekiej przeszłosci. Wierzymy, ze w
-          kazdym „-leciu” sa Ci, co cierpia i Ci, których lata tetnia pełnia
-          zycia towarzystkiego, bez troski o polityczne rozrachunki. W sanacji
-          bierzemy przykład z tych drugich, z szacukiem wspominajac tych, którzy
-          w lata 20. XX wieku poswiecili swoje zycie dla wiekszej idei. Sanacja
-          jest jak odskocznia od dzisiejszych „szybkich” czasów. Wchodzisz i
-          zapominasz o codziennych zmartwieniach. Nie wierzysz? Przyjdz i poczuj
-          to na swojej skórze.
+          <span className="text-primaryOrange">
+            Jesteśmy za unowocześnieniem
+          </span>{" "}
+          - unowocześniamy dania, składniki czy sposoby na spędzanie u nas
+          czasu, ALE pielęgnujemy historię, która miała miejsce w stosunkowo
+          niedalekiej przeszłosci.{" "}
+          <span className="text-primaryOrange">Wierzymy, ze </span> w każdym
+          „-leciu” są Ci, co cierpią i Ci, których{" "}
+          <span className="text-primaryOrange">
+            lata tętnią pełnią życia towarzystkiego, bez troski o{" "}
+          </span>{" "}
+          polityczne <span className="text-primaryOrange">rozrachunki</span>. W
+          sanacji bierzemy przykład z tych drugich, z szacunkiem wspominając
+          tych, którzy w latach 20. XX wieku poświęcili swoje życie dla większej
+          idei. Sanacja jest jak odskocznia od dzisiejszych „szybkich” czasów.{" "}
+          <span className="text-primaryOrange">
+            Wchodzisz i zapominasz o codziennych zmartwieniach.{" "}
+          </span>{" "}
+          Nie wierzysz? Przyjdź i poczuj to na swojej skórze.
         </ParagraphWithImage>
 
         <ParagraphWithImage
@@ -334,16 +279,31 @@ export default async function Home() {
           href="/"
           // productCardSubtitle="Złóż rezerwację"
         >
-          Uwielbiamy przezywac z Wami chwile, które sa dla Was najcenniejsze.
-          Kochamy zyc w Waszej pamieci i napawac Wasze serca ciepłem nawet po
-          upływie czasu. Nasze wnetrza sa niezapomniane, eleganckie i maja w
-          sobie magiczna intymnosc. To sa własnie te cechy, które przekazujemy
-          naszym gosciom w waznych dla nich chwilach. Stajemy na wysokosci
-          powierzonego nam zadania. Na momenty wydarzen stajemy sie Wasza
-          przestrzenia. To własnie Wy przezywacie u nas swoje momenty wzruszenia
-          i radosci - nawet Alpaki mozna do nas zaprosic. Dziekujemy Wam za
-          zaufanie! To Wy tworzycie historie Sanacji - to Wasze wydarzenia pisza
-          nasza historie!
+          <p>
+            <span className="text-primaryOrange">
+              Uwielbiamy przeżywać z Wami chwile,
+            </span>{" "}
+            które są dla Was najcenniejsze. Kochamy żyć w Waszej pamięci i
+            napawać Wasze serca ciepłem{" "}
+            <span className="text-primaryOrange">nawet po upływie czasu.</span>{" "}
+            Nasze wnętrza są niezapomniane, eleganckie i mają w sobie magiczną
+            intymność. To są właśnie te cechy, które{" "}
+            <span className="text-primaryOrange">
+              przekazujemy naszym gościom{" "}
+            </span>{" "}
+            w ważnych dla nich chwilach. Stajemy na wysokości powierzonego nam
+            zadania. Na <span className="text-primaryOrange">momenty </span>{" "}
+            wydarzeń stajemy się Waszą przestrzenią. To właśnie Wy przeżywacie u
+            nas swoje momenty wzruszenia i radości - nawet Alpaki można do nas
+            zaprosic.
+          </p>
+          <p>
+            {" "}
+            Dziękujemy Wam za zaufanie! To Wy tworzycie historię Sanacji -{" "}
+            <span className="text-primaryOrange">
+              to Wasze wydarzenia piszą naszą historie!{" "}
+            </span>
+          </p>
         </ParagraphWithImage>
       </section>
       <CallToAction
@@ -374,6 +334,12 @@ export default async function Home() {
             sizes={"100vw"}
             className="w-full object-cover"
           />
+          <h1
+            className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-primaryOrange 
+        [text-shadow:_7px_5px_20px_#000000]"
+          >
+            Kontakt
+          </h1>
         </div>
 
         <ParagraphWithImage
@@ -394,12 +360,26 @@ export default async function Home() {
           href="/"
           // productCardSubtitle="Złóż rezerwację"
         >
-          Organizujemy wydarzenia na ponad 40 osób, jak i te kameralne. Zadzwon,
-          badz wypełnij ponizszy formularz. Przystepnosc cenowa, piekne wnetrze
-          i niezapomniana atmosfera - czego chciec wiecej! Do usłyszenia nasz
-          Drogi Czytelniku! Przekonaj sie na własnej skórze czy te piekne słowa
-          moga byc naprawde prawdziwe. PS. Dla wtajemniczonych jestesmy
-          nastawieni takze pokojowo
+          <p>
+            <span className="text-primaryOrange">Organizujemy wydarzenia </span>{" "}
+            <b>na ponad 40 osób, jak i te kameralne</b>. Zadzwon, bądź wypełnij
+            poniższy formularz.{" "}
+            <span className="text-ptimaryOrange">
+              Przystępność cenowa, piękne wnętrze i niezapomniana atmosfera{" "}
+            </span>{" "}
+            - czego chcieć więcej!{" "}
+          </p>{" "}
+          <p>
+            Do usłyszenia nasz Drogi Czytelniku! Przekonaj się na własnej skórze
+            czy{" "}
+            <span className="text-primaryOrange">
+              te piękne słowa mogą być naprawdę prawdziwe.
+            </span>{" "}
+          </p>{" "}
+          <p>
+            <span className="text-primaryOrange">PS.</span> Dla wtajemniczonych
+            jesteśmy nastawieni także pokojowo.
+          </p>
         </ParagraphWithImage>
       </section>
     </main>

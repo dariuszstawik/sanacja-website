@@ -4,6 +4,7 @@ import Stripe from "stripe";
 import ProductCard from "../components/product-card";
 import ParagraphWithImage from "../components/paragraph-with-image";
 import Navbar from "../components/navbar";
+import Image from "next/image";
 
 async function getStripeProducts() {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? "", {
@@ -31,7 +32,22 @@ export default async function Zarezerwuj() {
   return (
     <>
       <Navbar />
-      <main className="mt-32">
+      <div className="mt-28 relative w-screen h-[300px]  overflow-hidden">
+        <Image
+          src="/sala-wiosenna.jpg"
+          alt="zdjęcie pracownika"
+          fill={true}
+          sizes={"100vw"}
+          className="w-full object-cover object-center"
+        />
+        <h1
+          className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-primaryOrange 
+        [text-shadow:_7px_5px_20px_#000000]"
+        >
+          Zarezerwuj miejsce
+        </h1>
+      </div>
+      <main className="">
         {/* <h2 classNAme="mt-32">{stripeProducts[0].product.name}</h2> */}
 
         <ul>

@@ -41,59 +41,66 @@ const CartView = () => {
       <div className="container mx-auto px-4">
         <div className="p-8 lg:p-20 bg-white">
           {selectedCart.length === 0 ? (
-            <h2 className="mx-auto my-12">Koszyk jest pusty</h2>
+            <h2 className="mx-auto my-6 mb-12">Koszyk jest pusty</h2>
           ) : (
-            <ul>
-              {selectedCart.map((item) => {
-                return (
-                  <li key={item.product.product.id}>
-                    <div className="mb-8 pb-4 border-b">
-                      <div className="w-full flex justify-between items-center">
-                        <h3 className="mb-2 text-xl font-bold font-heading w-2/3">
-                          {item.product.product.name}
-                        </h3>
-                        <div>
-                          <span
-                            className="px-4 cursor-pointer"
-                            onClick={() => {
-                              dispatch(decreaseCartItemAmount(item.product.id));
-                            }}
+            <>
+              <h2 className="mx-auto mt-6 mb-12">Twój koszyk</h2>
+              <ul>
+                {selectedCart.map((item) => {
+                  return (
+                    <li key={item.product.product.id}>
+                      <div className="mb-8 pb-4 border-b">
+                        <div className="w-full flex justify-between items-center">
+                          <h3 className="mb-2 text-xl font-bold font-heading w-2/3">
+                            {item.product.product.name}
+                          </h3>
+                          <div>
+                            <span
+                              className="px-4 cursor-pointer"
+                              onClick={() => {
+                                dispatch(
+                                  decreaseCartItemAmount(item.product.id)
+                                );
+                              }}
+                            >
+                              -
+                            </span>
+                            {item.amount} szt.
+                            <span
+                              className="pl-4 cursor-pointer"
+                              onClick={() => {
+                                dispatch(
+                                  increaseCartItemAmount({
+                                    product: item.product,
+                                    amount: 1,
+                                  })
+                                );
+                              }}
+                            >
+                              +
+                            </span>
+                          </div>
+                        </div>
+                        <div className="flex w-full lg:w-auto justify-between items-center">
+                          <button
+                            onClick={() => dispatch(removeFromCart(item))}
                           >
-                            -
-                          </span>
-                          {item.amount} szt.
-                          <span
-                            className="pl-4 cursor-pointer"
-                            onClick={() => {
-                              dispatch(
-                                increaseCartItemAmount({
-                                  product: item.product,
-                                  amount: 1,
-                                })
-                              );
-                            }}
-                          >
-                            +
-                          </span>
+                            usuń z koszyka
+                          </button>
+                          <p className="text-right text-lg font-bold font-heading text-smartOrange">
+                            {(
+                              (item.product.unit_amount / 100) *
+                              item.amount
+                            ).toFixed(2)}{" "}
+                            zł
+                          </p>
                         </div>
                       </div>
-                      <div className="flex w-full lg:w-auto justify-between items-center">
-                        <button onClick={() => dispatch(removeFromCart(item))}>
-                          "usuń z koszyka"
-                        </button>
-                        <p className="text-right text-lg font-bold font-heading text-smartOrange">
-                          {(
-                            (item.product.unit_amount / 100) *
-                            item.amount
-                          ).toFixed(2)}{" "}
-                          zł
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
+                    </li>
+                  );
+                })}
+              </ul>
+            </>
           )}
           <div className="flex flex-wrap items-center justify-between py-6  gap-6">
             <div className="mb-4 md:mb-0">
@@ -107,10 +114,10 @@ const CartView = () => {
               }, 0)}{" "}
               zł
             </span>
-            <p>
+            {/* <p>
               Po opłaceniu zamówienia otrzymasz swoje produkty przesyłką
               kurierską do 14 dni roboczych.
-            </p>
+            </p> */}
           </div>
           <hr className="w-1/2 my-6" />
           <div className="flex justify-start items-start mb-10">
