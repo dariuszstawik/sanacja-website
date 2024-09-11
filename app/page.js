@@ -106,13 +106,13 @@ export default async function Home() {
           return (
             <li key={i}>
               <ParagraphWithImage
-                productCardImg={`https://${contentfulProduct.fields.image.fields.file.url}`}
+                productCardImg={`https:${contentfulProduct.fields.image.fields.file.url}`}
                 alt=""
                 title={documentToReactComponents(
                   contentfulProduct.fields.title
                 )}
                 productCardTitle={contentfulProduct.fields.cardTitle}
-                icon={`https://${contentfulProduct.fields.icon.fields.file.url}`}
+                icon={`https:${contentfulProduct.fields.icon.fields.file.url}`}
                 href="/"
                 isFromContentful
                 contentfulProduct={contentfulProduct}
