@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="61"
+   height="52"
+   viewBox="0 0 16.139583 13.758333"
+   version="1.1"
+   id="svg92375"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="cart-icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview92377"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="2.3786088"
+     inkscape:cx="178.67587"
+     inkscape:cy="96.274764"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs92372" />
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g53612"
+       transform="matrix(0.26458333,0,0,0.26458333,-219.36128,-536.29304)">
+				<path
+   d="m 850,2078.1 c -3.7,0 -6.7,-3 -6.7,-6.7 0,-3.7 3,-6.7 6.7,-6.7 3.7,0 6.7,3 6.7,6.7 0,3.7 -3,6.7 -6.7,6.7 z"
+   id="path53600" />
+
+				<path
+   d="m 880.2,2078.1 c -3.7,0 -6.7,-3 -6.7,-6.7 0,-3.7 3,-6.7 6.7,-6.7 3.7,0 6.7,3 6.7,6.7 0,3.7 -3,6.7 -6.7,6.7 z"
+   id="path53602" />
+
+				<path
+   d="m 880.2,2072.4 h -28.7 c -0.8,0 -1.6,-0.4 -2,-1 -0.5,-0.7 -0.6,-1.5 -0.4,-2.3 l 3.9,-9.5 c 0.2,-0.5 0.8,-0.8 1.4,-0.6 0.5,0.2 0.8,0.8 0.6,1.4 l -3.8,9.4 c 0,0.1 0,0.2 0.1,0.3 0.1,0.1 0.2,0.2 0.4,0.2 h 28.7 c 0.6,0 1,0.5 1,1 -0.2,0.6 -0.6,1.1 -1.2,1.1 z"
+   id="path53604" />
+
+				<g
+   id="g53608">
+					<path
+   d="m 889.1,2034.7 c -0.5,-0.6 -1.2,-1 -2,-1 h -43.2 l -2,-4.7 c -0.2,-0.4 -0.5,-0.6 -0.9,-0.6 h -9.6 c -0.6,0 -1,0.5 -1,1 0,0.5 0.5,1 1,1 h 8.9 l 12.7,29 c 0.4,0.9 1.3,1.5 2.3,1.5 H 880 c 1.1,0 2.1,-0.7 2.4,-1.8 l 7,-22.3 c 0.3,-0.6 0.1,-1.5 -0.3,-2.1 z m -11.3,20.3 h -21.2 c -0.6,0 -1,-0.5 -1,-1 0,-0.5 0.5,-1 1,-1 h 21.2 c 0.6,0 1,0.5 1,1 0,0.5 -0.4,1 -1,1 z m 1.9,-6.5 h -24.8 c -0.6,0 -1,-0.5 -1,-1 0,-0.6 0.5,-1 1,-1 h 24.8 c 0.6,0 1,0.5 1,1 0,0.5 -0.5,1 -1,1 z m 1.4,-6.6 h -27.8 c -0.6,0 -1,-0.5 -1,-1 0,-0.6 0.5,-1 1,-1 h 27.8 c 0.6,0 1,0.5 1,1 0.1,0.6 -0.4,1 -1,1 z"
+   id="path53606" />
+
+				</g>
+
+				<path
+   d="m 833.2,2029.5 c 0,0.9 -0.7,1.6 -1.6,1.6 -0.9,0 -1.6,-0.7 -1.6,-1.6 0,-0.9 0.7,-1.6 1.6,-1.6 0.8,0 1.6,0.7 1.6,1.6 z"
+   id="path53610" />
+
+			</g>
+  </g>
+</svg>

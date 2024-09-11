@@ -2,32 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* @font-face {
+  font-family: 'MinionPro-Regular';
+  src: url('/MinionPro-Regular.woff') format('woff');
+
+} */
+
+@font-face {
+  font-family: 'Minion Pro';
+  src:        url('/fonts/MinionPro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: 'Minion Pro';
+  src:        url('/fonts/MinionPro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Minion Pro', serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer base {
+
+  body {
+    @apply w-screen antialiased overflow-x-hidden lg:text-lg
+  }
+
+  h1 {
+    @apply text-3xl xl:text-[44px] font-semibold
+  }
+  h2 {
+    @apply text-3xl xl:text-[44px] font-semibold
+  }
+
+  h3 {
+    @apply text-2xl lg:text-3xl font-semibold
+  }
+
+  h4 {
+    @apply text-xl font-semibold
+  }
+
+  article p {
+    @apply mb-4
+  }
+
+  article h2 {
+    @apply mt-10 mb-4 text-xl
+  }
+
+  /* article h2 {
+    @apply mt-10 mb-4 text-xl
+  } */
+
+  article i {
+    @apply text-primaryOrange not-italic
+  }
+
+ i {
+    @apply text-primaryOrange not-italic
+  }
+
+  article li {
+    @apply block
+  }
+
 }
