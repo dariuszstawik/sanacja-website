@@ -316,7 +316,7 @@ export default async function Home() {
           alt="zdjęcie pracownika"
           fill={true}
           sizes={"100vw"}
-          className="w-full object-cover"
+          className="w-full object-cover object-top"
         />
       </div>
       <CallToAction
