@@ -62,7 +62,7 @@ export default async function Zarezerwuj() {
                   )}
                   productCardTitle={contentfulProduct.fields.cardTitle}
                   icon={`https:${contentfulProduct.fields.icon.fields.file.url}`}
-                  href="/"
+                  // href="/"
                   isFromContentful
                   hasOrderBar
                   stripeProduct={stripeProducts.filter(
