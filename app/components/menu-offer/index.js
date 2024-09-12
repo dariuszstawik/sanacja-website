@@ -3,7 +3,7 @@ import ProductCard from "../product-card";
 export default function MenuOffer({ hasAdditionalContent }) {
   return (
     <>
-      <div className="w-[80%] mx-auto my-16 flex justify-between">
+      <div className="w-[80%] mx-auto my-16 flex-col  lg:flex-row justify-between">
         <ProductCard
           productCardImg="/menu-sanacyjne.jpg"
           alt=""

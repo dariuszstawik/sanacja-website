@@ -19,7 +19,7 @@ export default async function Home() {
   return (
     <main>
       <NavbarHomepage />
-      <div className="pt-28 relative w-screen h-[300px] lg:h-screen overflow-hidden">
+      <div className="mt-28 relative w-screen h-[300px] lg:h-[85vh] overflow-hidden">
         <Image
           src="/hero-image.jpg"
           alt="zdjęcie pracownika"
