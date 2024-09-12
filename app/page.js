@@ -6,6 +6,7 @@ import MenuOffer from "./components/menu-offer";
 import NavbarHomepage from "./components/navbar-homepage";
 import { client } from "@/lib/contentful/client";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import ContactForm from "./components/contact-form";
 
 async function getContentfulContent() {
   const resContent = await client.getEntries({
@@ -383,6 +384,7 @@ export default async function Home() {
           </p>
         </ParagraphWithImage>
       </section>
+      <ContactForm />
     </main>
   );
 }
