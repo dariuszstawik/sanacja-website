@@ -14,7 +14,7 @@ export function ShoppingCartIcon({ itemCount }) {
       </svg>
       {itemCount > 0 && (
         <span
-          className="absolute top-0 right-0 w-5 h-5 flex items-center justify-center bg-smartOrange rounded-full text-white text-xs"
+          className="absolute top-0 right-0 w-5 h-5 flex items-center justify-center bg-primaryOrange rounded-full text-white text-xs"
           style={{ transform: "translate(50%, -50%)" }}
         >
           {itemCount}

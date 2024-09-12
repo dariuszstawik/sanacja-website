@@ -42,7 +42,7 @@ body {
 @layer base {
 
   body {
-    @apply w-screen antialiased overflow-x-hidden lg:text-lg
+    @apply w-screen min-h-screen antialiased overflow-x-hidden lg:text-lg
   }
 
   h1 {

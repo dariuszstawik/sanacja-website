@@ -310,9 +310,9 @@ export default async function Home() {
         title="Muzyka na żywo i jedzenie to coś co kochamy!"
         subtitle="Do zobaczenia na degustacji!"
       />
-      <div className="relative w-screen h-[300px] lg:h-[440px] overflow-hidden">
+      <div className="relative w-screen h-[300px] lg:h-[460px] overflow-hidden">
         <Image
-          src="/alpaki.jpg"
+          src="/alpaki-cropped.jpg"
           alt="zdjęcie pracownika"
           fill={true}
           sizes={"100vw"}
