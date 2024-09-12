@@ -19,14 +19,31 @@ export async function POST(request) {
     });
 
     const session = await stripe.checkout.sessions.create({
-      success_url: "https://localhost:3000/success",
-      cancel_url: "https://localhost:3000//cancel",
+      success_url: "https://sanacjaostrow.netlify.app/success",
+      cancel_url: "https://sanacjaostrow.netlify.app/cancel",
       line_items: body.lineItems,
       mode: "payment",
+      custom_fields: [
+        {
+          key: "order_comments",
+          label: {
+            type: "custom",
+            custom: "Uwagi do zamówienia np. dotyczące stolika",
+          },
+          type: "text",
+          optional: true, // Pole opcjonalne
+        },
 
-      // // shipping_address_collection: {
-      // //   allowed_countries: ["PL", "US", "CA", "GB", "DE", "FR"],
-      // },
+        // {
+        //   key: "phone_number",
+        //   label: {
+        //     type: "custom",
+        //     custom: "Numer telefonu",
+        //   },
+        //   type: "text",
+        //   optional: true, // Pole wymagane
+        // },
+      ],
     });
     return NextResponse.json({ session });
   } catch (err) {
