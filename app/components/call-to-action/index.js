@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CallToAction({ title, subtitle }) {
   return (
-    <div className="w-screen h-64 lg:h-32 bg-primaryGreen flex flex-col lg:flex-row justify-center gap-4 lg:justify-between items-center px-[10%] mx-auto">
+    <div className="w-screen h-72 lg:h-32 bg-primaryGreen flex flex-col lg:flex-row justify-center gap-4 lg:justify-between items-center px-[10%] mx-auto">
       <img
         src="/arrow-asset-white.svg"
         alt="arrow"

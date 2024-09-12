@@ -42,7 +42,8 @@ export default async function Home() {
         już 28.września o godzinie 17:30. Piszemy nową historię Sanacji.
       </div>
 
-      <div className="w-[80%] mx-auto my-16 flex justify-between">
+      <MenuOffer />
+      {/* <div className="w-[80%] mx-auto my-16 flex justify-between">
         <ProductCard
           productCardImg="/menu-sanacyjne-sm.jpg"
           alt=""
@@ -68,7 +69,7 @@ export default async function Home() {
           icon="/menu-rybne-min.svg"
           href="/zarezerwuj"
         />
-      </div>
+      </div> */}
 
       <section className="pt-28" id="degustacja">
         <CallToAction
