@@ -47,15 +47,15 @@ const Footer = () => {
               />
             </a>
 
-            {/* <a href="https://www.tiktok.com/@smart_equestrian" target="_blank"> */}
-            <Image
-              src="/tiktok-icon.svg"
-              width="64"
-              height="64"
-              alt="tiktok"
-              className="w-10 h-10"
-            />
-            {/* </a> */}
+            <a href="https://www.tiktok.com/@sanacja.rest" target="_blank">
+              <Image
+                src="/tiktok-icon.svg"
+                width="64"
+                height="64"
+                alt="tiktok"
+                className="w-10 h-10"
+              />
+            </a>
 
             {/* <a
               href="https://www.youtube.com/@smartequestrian3953"

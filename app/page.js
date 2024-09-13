@@ -355,7 +355,9 @@ export default async function Home() {
             <>
               <span className="block">
                 <span className="text-primaryOrange">Telefon:</span>{" "}
-                <span className="whitespace-nowrap	">+48 790 480 410 </span>
+                <a href="tel:+48790480410" className="whitespace-nowrap">
+                  +48 790 480 410{" "}
+                </a>
               </span>{" "}
               <span className="text-primaryOrange">ul. Strzelecka 18,</span>{" "}
               <span className="block whitespace-nowrap">
