@@ -200,7 +200,7 @@ export default async function Home() {
           }
           productCardImg="/sala-wiosenna.jpg"
           icon="/sanacja-icon.svg"
-          productCardTitle="Sala wiosenna"
+          productCardTitle="Sala klasyczna"
           productCardSubtitle="Miejsce dla artystów i muzyki na żywo"
           href="/zarezerwuj"
           // productCardSubtitle="Złóż rezerwację"

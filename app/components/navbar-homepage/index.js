@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-
 import Link from "next/link";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -41,7 +40,7 @@ const NavbarHomepage = () => {
         <ul
           className={
             isMobileMenuActive
-              ? " list-none absolute z-40 w-screen top-full left-0 py-4 flex flex-col justify-center align-center items-center gap-10 lg:static lg:flex-row"
+              ? "bg-primaryGreen list-none absolute z-40 w-screen top-full left-0 py-4 flex flex-col justify-center align-center items-center gap-10 lg:static lg:flex-row"
               : " list-none flex-col justify-center align-center items-center gap-10 lg:flex-row my-4 hidden lg:flex lg:justify-end ml-4"
           }
         >
