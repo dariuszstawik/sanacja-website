@@ -146,6 +146,12 @@ export default async function Home() {
             sizes={"100vw"}
             className="w-full object-cover"
           />
+          <h2
+            className="xl:text-5xl absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-primaryOrange 
+        [text-shadow:_7px_5px_20px_#000000]"
+          >
+            O nas
+          </h2>
         </div>
         <ParagraphWithImage
           title={
@@ -336,12 +342,12 @@ export default async function Home() {
             sizes={"100vw"}
             className="w-full object-cover"
           />
-          <h1
-            className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-primaryOrange 
+          <h2
+            className="xl:text-5xl absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-primaryOrange 
         [text-shadow:_7px_5px_20px_#000000]"
           >
             Kontakt
-          </h1>
+          </h2>
         </div>
 
         <ParagraphWithImage
