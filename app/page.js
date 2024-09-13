@@ -354,11 +354,13 @@ export default async function Home() {
           title={
             <>
               <span className="block">
-                <span className="text-primaryOrange">Telefon:</span> +48 790 480
-                410{" "}
+                <span className="text-primaryOrange">Telefon:</span>{" "}
+                <span className="whitespace-nowrap	">+48 790 480 410 </span>
               </span>{" "}
               <span className="text-primaryOrange">ul. Strzelecka 18,</span>{" "}
-              63-400 Ostrów Wlkp.
+              <span className="block whitespace-nowrap">
+                63-400 Ostrów Wlkp.
+              </span>
             </>
           }
           productCardImg="/wydarzenia-okolicznosciowe-kontakt.jpg"
