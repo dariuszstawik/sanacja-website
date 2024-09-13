@@ -107,6 +107,13 @@ export default async function Zarezerwuj() {
           icon="/menu-rybne-min.svg"
           href="/"
         /> */}
+        <div className="w-[80%] text-xl font-bold mx-auto my-16">
+          Przychodzisz w grupie, ale każdy płaci za siebie? Zapewne chcecie mieć
+          miejsce przy jednym stoliku. Wyślij nam tę informację na maila, a
+          przygotujemy dla Was odpowiedni stolik. W treści zawrzyj: ilość osób
+          przy stole + imiona każdego gościa z pierwszą literą ich nazwiska.
+          Dziękujemy!
+        </div>
       </main>
     </>
   );

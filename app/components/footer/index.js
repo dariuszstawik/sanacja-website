@@ -6,7 +6,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <section className="container mt-auto px-16 pt-16 pb-8 w-full mx-auto bg-primaryGreen">
-      <div className="flex flex-col xl:flex-row xl:justify-between xl:items-center bg-primaryGreen">
+      <div className="w-[80%] mx-auto flex flex-col xl:flex-row xl:justify-between xl:items-center bg-primaryGreen">
         <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-start gap-10 bg-primaryGreen">
           <Logo />
           <div className="flex flex-wrap gap-6 justify-center items-center">
@@ -91,8 +91,8 @@ const Footer = () => {
           >
             Polityka prywatności
           </Link>
-          <Link className="p-4 text-primaryOrange" href={`/regulamin-sklepu`}>
-            Regulamin sklepu
+          <Link className="p-4 text-primaryOrange" href={`/regulamin`}>
+            Regulamin
           </Link>
         </div>
       </div>
