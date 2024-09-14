@@ -163,7 +163,7 @@ export default async function Home() {
               <span className="text-primaryOrange">wyjątkowy czas.</span>
             </>
           }
-          productCardImg="/menu-sanacyjne.jpg"
+          productCardImg="/kasa-napiwkomat.jpg"
           icon="/sanacja-icon.svg"
           productCardTitle="Kasa fiskalna"
           productCardSubtitle="Napiwkomat"
