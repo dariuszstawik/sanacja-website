@@ -19,8 +19,8 @@ export async function POST(request) {
     });
 
     const session = await stripe.checkout.sessions.create({
-      success_url: "https://sanacjaostrow.netlify.app/success",
-      cancel_url: "https://sanacjaostrow.netlify.app/cancel",
+      success_url: "https://sanacjaostrow.pl/success",
+      cancel_url: "https://sanacjaostrow.pl/cancel",
       line_items: body.lineItems,
       mode: "payment",
       custom_fields: [
