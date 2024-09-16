@@ -20,6 +20,11 @@ export default function RootLayout({ children }) {
           <Footer />
         </Providers>
       </body>
+      <script
+        id="cookieyes"
+        type="text/javascript"
+        src="https://cdn-cookieyes.com/client_data/34f31d1f48564a6dfbd23e8d/script.js"
+      ></script>
     </html>
   );
 }
